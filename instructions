@@ -1,0 +1,20 @@
+PART 1:
+
+          - Branch from master and create a branch named => [your firstname]-feature
+          - Update the "file" file with the following text => "This file was updated by [your firstname]"
+          - Create a PR with your changes
+          - Merge it to master
+          - Retrieve locally what got merged on master
+                    -> Expected result: Your local version of the master branch should contain the changes you just merged from [your firstname]-feature
+
+PART 2:
+
+          - Now go to the PR list on Github. You'll see I created 2 PRs. Merge the one that was named after you to master
+          - Update your [your firstname]-feature branch locally with my changes that got merged to master
+                    -> Expected result: [your firstname]-feature should contain the file I created on the PR you just merged
+
+
+PART 3:
+
+          - On the "file" file, add a big amount of text then remove it use a git command
+                    -> Expected result: Run "git status". Should tell you "Your branch is up to date, nothing to commit, working tree clean"
