@@ -4,7 +4,7 @@ function logMyName() {
   let name = "Dwayne The Rock Johnson";
 
   name = "Mickael";
-  console.log("NAME: ", name);
+  console.log("\"NAME:\"",name)
 }
 
 function logMyFavoriteDish() {
