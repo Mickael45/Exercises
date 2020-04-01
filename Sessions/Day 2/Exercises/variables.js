@@ -5,12 +5,13 @@ function logMyName() {
 
   name = "Mickael";
   console.log("\"NAME:\"",name)
+  
 }
 
 function logMyFavoriteDish() {
   let favoriteDish = "Nutella Pancakes";
 
-  favoriteDish = "It won't change";
+  /*favoriteDish = "It won't change"*/;
   console.log("Favorite Dish: ", favoriteDish);
 }
 
@@ -55,3 +56,5 @@ logMyWardrobeItemsNumber();
 
 /*   The two following functions behave properly but why ? The hobbie and wardrobeItems variable were defined as const, they should be unpdatable. 
    Try to find why and answer below. */
+
+   /*As the wardrobeItems object has been assigned a value outside of the function*/

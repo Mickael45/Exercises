@@ -4,7 +4,7 @@ function addNumbers(a, b) {
   return a + b;
 }
 
-const firstResult = addNumbers(1, 2);
+const firstResult = addNumbers('a', 'b');
 console.log(firstResult, " is a ", typeof firstResult);
 // Expected type:
 const secondResult = addNumbers("1", 2);

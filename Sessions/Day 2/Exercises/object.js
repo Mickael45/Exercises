@@ -2,6 +2,8 @@
 
 // This can look scary but keep in mind that this notation is equivalent to
 // function writeMyNameProperly() for now
+
+
 const writeMyNameProperly = name => {
   // This function should return a one word string with the first letter in uppercase and the rest in lowercase
 };
