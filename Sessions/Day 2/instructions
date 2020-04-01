@@ -1,0 +1,26 @@
+PART 1: Setup
+
+          -> Make sure you have node install. To do so, run "node -v". If this returns a version number, we're good to good
+          -> Branch from this branch to [your-firstname]-basic-js
+
+PART 2: Exercises
+
+          -> Variables: Make the necessary changes to achieve the expected console output. Little bonus at the end if you successfuly 
+                        solve the black magic logic.
+
+          -> Types: Nothing really fancy here, but if you pass unexpected types some weird behavior might occur
+                    Try to guess the types of the values that are going to be returned by the function before running the file
+                    Write your answer then run "node Sessions/Day\ 2/Exercises/types.js" to see the results
+                    NO CHEATING !
+
+          -> Object: Follow this link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+                     Complete the functions I created to get the expected outcome
+                     To run this file run "node Sessions/Day\ 2/Exercises/object.js"
+
+          -> Scope: No need to run the code here, just read and take a moment to understand the code. Then answer the questions.
+                    Once you answered, feel free to test it out and if some of your answers were wrong, keep them and add your correction one line below
+                    To run this file run "node Sessions/Day\ 2/Exercises/scope.js"
+
+PART 3:
+
+          -> Add, commit and create a PR.
