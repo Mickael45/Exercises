@@ -13,7 +13,7 @@ PART 2: Exercises
                     Write your answer then run "node Sessions/Day\ 2/Exercises/types.js" to see the results
                     NO CHEATING !
 
-          -> Object: Follow this link https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
+          -> Object: Follow this link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
                      Complete the functions I created to get the expected outcome
                      To run this file run "node Sessions/Day\ 2/Exercises/object.js"
 
