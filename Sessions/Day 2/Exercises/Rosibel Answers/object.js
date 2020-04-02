@@ -2,18 +2,29 @@
 
 // This can look scary but keep in mind that this notation is equivalent to
 // function writeMyNameProperly() for now
+
 const writeMyNameProperly = name => {
   // This function should return a one word string with the first letter in uppercase and the rest in lowercase
+  //name.toLoweCase();
+  
+  let calLength = (name.length)-1;
+  name = (name.charAt(0).toUpperCase() + name.substring(name.length-calLength));
+   return name;
 };
 
 const nameProperlyWritten = writeMyNameProperly("MiCkAeL");
 
+//const nameProperlyWritten = writeMyNameProperly("MiCkAeL");
 console.log(nameProperlyWritten);
 // Expected output result: "Mickael"
+
 console.log(writeMyNameProperly("MiCkAeL and a bunch of crap"));
+
 // Expected output result: "Mickael"
 
-const writeMyNameInUpperCase = () => {};
+const writeMyNameInUpperCase = name => {
+return ame = name.toUpperCase();
+};
 
 console.log(writeMyNameInUpperCase(nameProperlyWritten));
 // Expected output result: "MICKAEL"
@@ -21,7 +32,9 @@ console.log(writeMyNameInUpperCase(nameProperlyWritten));
 ///////////////////////////////////////////////////////// PART 2 /////////////////////////////////////////////////////////
 
 const logMyHobbiesOneByOne = hobbies => {
-  // This function should console.log each hobby one by one
+  for (var i in hobbies) {
+    console.log(hobbies[i]);
+  }
 };
 
 const hobbies = ["Sleeping", "Eating", "Annoying whamen", "Eating some more"];
@@ -33,7 +46,13 @@ logMyHobbiesOneByOne(hobbies);
 // "Annoying whamen"
 // "Eating some more"
 
-const addPlayingGamesInMyHobbies = () => {};
+const addPlayingGamesInMyHobbies = ()  => {
+  const otherHobbies = ["Playing Games"];
+  logMyHobbiesOneByOne(hobbies);
+  logMyHobbiesOneByOne(otherHobbies);
+ 
+
+};
 
 addPlayingGamesInMyHobbies();
 console.log(hobbies);
@@ -44,7 +63,9 @@ console.log(hobbies);
 // "Eating some more"
 // "Playing Games"
 
-const removePlayingGamesInMyHobbies = () => {};
+const removePlayingGamesInMyHobbies = () => {
+  logMyHobbiesOneByOne(hobbies);
+};
 
 removePlayingGamesInMyHobbies();
 console.log(hobbies);
