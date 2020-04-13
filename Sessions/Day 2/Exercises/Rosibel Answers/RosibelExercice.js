@@ -4,6 +4,6 @@ console.log(textInfo);
 //firstResult = Integer/Number
 //secondResult = String
 //thirdResult = String
-//
+//I have created this file to respond to questions in file types
 
 
