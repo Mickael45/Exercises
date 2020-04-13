@@ -51,7 +51,7 @@ let number = 0; // This is a Number
 
 // Here's an example of what lies in the String type
 // It's basically an object containing functions and variables
-// Check this link for a full overview of what this object contains https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
+// Check this link for a full overview of what this object contains https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 const String = {
   toLowerCase: () => {},

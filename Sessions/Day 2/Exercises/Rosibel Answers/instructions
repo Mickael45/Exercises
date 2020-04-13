@@ -13,13 +13,21 @@ PART 2: Exercises
                     Write your answer then run "node Sessions/Day\ 2/Exercises/types.js" to see the results
                     NO CHEATING !
 
-          -> Object: Follow this link https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
+          -> Object: Follow this link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
                      Complete the functions I created to get the expected outcome
                      To run this file run "node Sessions/Day\ 2/Exercises/object.js"
 
           -> Scope: No need to run the code here, just read and take a moment to understand the code. Then answer the questions.
                     Once you answered, feel free to test it out and if some of your answers were wrong, keep them and add your correction one line below
                     To run this file run "node Sessions/Day\ 2/Exercises/scope.js"
+
+
+          -> Function: Follow the requirements given in the functions.js file and complete the empty functions that are in it.
+                       NONE OF MY CODE IS TO BE REMOVED !
+                       Only add code in the functions where the "// add your code here" comment is in.
+                       At any moment you can test your work and make sure everything's working
+                       as expected. To do this move to the /Exercises folder and run "node tests.js".
+
 
 PART 3:
 
