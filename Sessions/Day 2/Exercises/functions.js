@@ -1,5 +1,49 @@
 const { myConsoleLog } = require("./utils");
-let validArray;
+
+
+/*
+          EXERCISE 1
+ 
+The addNumber function should add both parameters and return the result
+
+*/
+
+const addNumber = (a, b) => {
+  let result = a + b;
+ return (result);
+};
+
+const addNumber2 = (a, b) => {
+  return a + b
+}
+
+const addNumber3 = (a, b) => a + b
+
+/*
+          EXERCISE 2
+ 
+The subtractFive function should subtract 5 to the passed parameter return the result
+
+*/
+
+const subtractFive = (a) => {
+  return (a - 5);
+};
+
+const subtractFive2 = (a) => a - 5
+
+/*
+          EXERCISE 3
+
+The addOneToEachElement has a number array as parameter. The function should
+return a new array containing all the values increased by 1.
+i.e:
+          const result = addOneToEachElement([1, 2, 3])
+          result should be equal to [2, 3, 4]
+
+If the function is called with no parameter or an empty array, it should return an empty array
+
+*/
 
 //Aux function
 const validateArray =  (parameter) =>  {
@@ -16,56 +60,27 @@ const validateArray =  (parameter) =>  {
 
 };
 
-/*
-          EXERCISE 1
- 
-The addNumber function should add both parameters and return the result
+const validateArray2 =  (parameter) =>  {
+  // It returns 1 if  the parameter is an array and it is not empty.
+  if (Array.isArray(parameter) && parameter.length >  0) {
+   return true;
+  // It returns 0 if  the parameter is not an array or if is an array but  it is  empty.
+  }else{
+    return false;
+  } 
 
-*/
-
-const addNumber = (a, b) => {
-  let result = a + b;
- return (result);
 };
-
-
-/*
-          EXERCISE 2
- 
-The subtractFive function should subtract 5 to the passed parameter return the result
-
-*/
-
-const subtractFive = (a) => {
-  return (a - 5);
-};
-
-/*
-          EXERCISE 3
-
-The addOneToEachElement has a number array as parameter. The function should
-return a new array containing all the values increased by 1.
-i.e:
-          const result = addOneToEachElement([1, 2, 3])
-          result should be equal to [2, 3, 4]
-
-If the function is called with no parameter or an empty array, it should return an empty array
-
-*/
 
 const addOneToEachElement = (numbers) => {
-
-  let validity;
-  validity = validateArray(numbers);
+  const validity = validateArray(numbers);
 
   // It returns the new added values in the array
-  if (validity  == 1) {
+  if (validity == 1) {
 
-    for (let i = 0 ; i < numbers.length ; i++){
-      let asa = numbers[i];
-      let b  = asa +1;
-      myConsoleLog(b);
-     
+    for (const i = 0 ; i < numbers.length ; i++){
+      const asa = numbers[i];
+      const b  = asa +1;
+      myConsoleLog(b)
     }
       
   }else{
@@ -74,9 +89,21 @@ const addOneToEachElement = (numbers) => {
   
 }
 
-
-let nu  = [1,2,3]
-addOneToEachElement(nu);
+const addOneToEachElement2 = (numbers) => {
+  // It returns the new added values in the array
+  // if (validity === true)
+  // if (validity)
+  // if (validity === false)
+  // if (!validity)
+  if (validateArray(numbers)) {
+    for (const i = 0 ; i < numbers.length ; i++){
+      numbers[i] = numbers[i] + 1
+    }
+    return numbers
+  } else {
+    return [];
+  }
+}
 
 /*
           EXERCISE 4
@@ -92,10 +119,11 @@ If the function is called with no parameter or an empty array, it should return 
 
 const displayArrayElementsInUpperCase = (strings) => {
   validArray = validateArray(strings);
-  let stringValue;
   // It logs the new added values in the array
   if (validArray  == 1) {
     for (let i = 0 ; i < strings.length ; i++){
+      let stringValue;
+      
       stringValue = String(strings[i]);
       strings[i]= stringValue.toUpperCase()
       myConsoleLog(strings[i]);
@@ -105,6 +133,10 @@ const displayArrayElementsInUpperCase = (strings) => {
     return (emptyArray =[]);
   } 
    
+}
+
+const displayArrayElementsInUpperCase2 = (strings) => {
+  myConsoleLog(strings.forEach(string => string.toUpperCase()));
 }
 
 
@@ -119,6 +151,7 @@ The use of Array.map and all any other Array related function is PROHIBITED !!!
 
 */
 
+
 const myMap = (numbers) => {
   for (let i = 0 ; i < numbers.length ; i++){
     numbers[i]= numbers[i] + 1;
@@ -126,11 +159,52 @@ const myMap = (numbers) => {
   }
 };
 
+
+const myMap2 = (numbers) => {
+  const newArray = []
+  for (let i = 0 ; i < numbers.length ; i++){
+    newArray[i]= numbers[i] + 1;
+  }
+  return newArray
+};
+
+const forEach = (cb) => {
+  for (const i = 0; i < array.length; i++) {
+    cb(array[i])
+  }
+}
+
+const printElement = (element) => {
+  console.log(element)
+}
+
+myArray.forEach(printElement)
+
+const map = (cb) => {
+  // array
+  const newArray = []
+  for (const i = 0; i < array.length; i++) {
+    newArray.push(cb(array[i]))
+  }
+  return newArray
+}
+
+const incrementByOne = (element) => {
+  return element + 1
+}
+
+const myArray = [34, 43, 54]
+
+
+const newArray = myArray.map(incrementByOne)
+
+// Call printElement function on every element of the array
+
+
 const addOneToEachElementUsingMyMap = (numbers) => {
   return myMap(numbers);
 };
 
-addOneToEachElementUsingMyMap(1,2);
 /*
                   EXERCISE 6
 
@@ -198,6 +272,23 @@ const bulletProodAddNumber = (a, b) => {
   }
     
 };
+
+const bulletProodAddNumber2 = (a, b) => {
+  function isNumber(variable) {
+    return typeof variable === 'number'
+  }
+
+  const isAANumber = isNumber(a)
+  const isBANumber = isNumber(b)
+
+  if (isAANumber && isBANumber) {
+    return a + b
+  } else if (isAANumber || isBANumber) {
+    return isAANumber ? a : b
+  }
+  return -1    
+};
+
 
 /*
           EXERCISE 2
