@@ -84,6 +84,7 @@ const runExerciseFive = () => {
   checkExercise(results, 5);
 };
 
+
 const runExerciseFour = () => {
   const { displayArrayElementsInUpperCase } = functions;
 
@@ -121,7 +122,7 @@ const runExerciseThree = () => {
   results.push(addOneToEachElement([4, 443, 432, 44, 445, 86, 654, "lol"]));
   results.push(addOneToEachElement([4, 443, 432, 44, 445, 86, null, 654222]));
   results.push(addOneToEachElement([]));
-  results.push(addOneToEachElement());
+  sresults.push(addOneToEachElement());
 
   checkExercise(results, 3);
 };
@@ -156,10 +157,10 @@ const runExercises = () => {
   try {
     runExerciseOne();
     runExerciseTwo();
-    runExerciseThree();
-    runExerciseFour();
-    runExerciseFive();
-    runExerciseSix();
+    //runExerciseThree();
+    //runExerciseFour();
+    //runExerciseFive();
+    //runExerciseSix();
     runExerciseSeven();
     runExerciseEight();
   } catch (e) {

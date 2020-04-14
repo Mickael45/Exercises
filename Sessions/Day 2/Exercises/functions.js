@@ -1,4 +1,20 @@
 const { myConsoleLog } = require("./utils");
+let validArray;
+
+//Aux function
+const validateArray =  (parameter) =>  {
+
+  let emptyArray =[];
+  let x;
+  // It returns 1 if  the parameter is an array and it is not empty.
+  if (Array.isArray(parameter) && parameter.length >  0) {
+   return (1);
+  // It returns 0 if  the parameter is not an array or if is an array but  it is  empty.
+  }else{
+    return (0);
+  } 
+
+};
 
 /*
           EXERCISE 1
@@ -8,8 +24,10 @@ The addNumber function should add both parameters and return the result
 */
 
 const addNumber = (a, b) => {
-  // add your code here
+  let result = a + b;
+ return (result);
 };
+
 
 /*
           EXERCISE 2
@@ -19,7 +37,7 @@ The subtractFive function should subtract 5 to the passed parameter return the r
 */
 
 const subtractFive = (a) => {
-  // add your code here
+  return (a - 5);
 };
 
 /*
@@ -36,9 +54,29 @@ If the function is called with no parameter or an empty array, it should return 
 */
 
 const addOneToEachElement = (numbers) => {
-  // add your code here
-  // HINT: Check the Array type related function on the internet
-};
+
+  let validity;
+  validity = validateArray(numbers);
+
+  // It returns the new added values in the array
+  if (validity  == 1) {
+
+    for (let i = 0 ; i < numbers.length ; i++){
+      let asa = numbers[i];
+      let b  = asa +1;
+      myConsoleLog(b);
+     
+    }
+      
+  }else{
+    return (emptyArray =[]);
+  }  
+  
+}
+
+
+let nu  = [1,2,3]
+addOneToEachElement(nu);
 
 /*
           EXERCISE 4
@@ -53,9 +91,22 @@ If the function is called with no parameter or an empty array, it should return 
 */
 
 const displayArrayElementsInUpperCase = (strings) => {
-  // add your code here
-  // HINT: Check the Array type related function on the internet
-};
+  validArray = validateArray(strings);
+  let stringValue;
+  // It logs the new added values in the array
+  if (validArray  == 1) {
+    for (let i = 0 ; i < strings.length ; i++){
+      stringValue = String(strings[i]);
+      strings[i]= stringValue.toUpperCase()
+      myConsoleLog(strings[i]);
+     
+    }
+  }else{
+    return (emptyArray =[]);
+  } 
+   
+}
+
 
 /*
           EXERCISE 5
@@ -69,13 +120,17 @@ The use of Array.map and all any other Array related function is PROHIBITED !!!
 */
 
 const myMap = (numbers) => {
-  // add your code here
+  for (let i = 0 ; i < numbers.length ; i++){
+    numbers[i]= numbers[i] + 1;
+    myConsoleLog(numbers[i]);
+  }
 };
 
 const addOneToEachElementUsingMyMap = (numbers) => {
   return myMap(numbers);
 };
 
+addOneToEachElementUsingMyMap(1,2);
 /*
                   EXERCISE 6
 
@@ -88,12 +143,24 @@ The use of Array.forEach and all any other Array related function is PROHIBITED 
 */
 
 const myForEach = (strings) => {
-  // add your code here
+  validArray = validateArray(strings);
+  let stringValue;
+  // It logs the new added values in the array
+  if (validArray  == 1) {
+    for (let i = 0 ; i < strings.length ; i++){
+      stringValue = String(strings[i]);
+      strings[i]= stringValue.toUpperCase()
+      myConsoleLog(strings[i]);
+    }
+   }else{
+      return (emptyArray =[]);
+    } 
 };
 
 const displayArrayElementsInUpperCaseUsingMyForEach = (strings) => {
   myForEach(strings);
 };
+
 
 /*
           EXERCISE 7
@@ -110,7 +177,26 @@ The new version of the function should:
 */
 
 const bulletProodAddNumber = (a, b) => {
-  // add your code here
+  switch (true){
+      case (typeof a == 'number' && typeof b == 'number'):
+          let result = a + b;
+          myConsoleLog(result);
+          return (result);
+          break;
+      case (typeof a == 'number' && typeof b != 'number'):
+          myConsoleLog(a);
+          return (a);
+          break;
+      case (typeof a != 'number' && typeof b == 'number'):
+          myConsoleLog(b);
+          return (b);
+          break;       
+      case (typeof a != 'number' && typeof b != 'number'):
+          myConsoleLog(-1);
+          return (-1);
+          break;      
+  }
+    
 };
 
 /*
@@ -126,7 +212,18 @@ The new version of the function should:
 */
 
 const bulletProofSubtractFive = (a) => {
-  // add your code here
+  switch (true){
+    case (typeof a == 'number'):
+        let result = a - 5;
+        myConsoleLog(result);
+        return (result);
+        break;
+    case (typeof a != 'number'):
+        myConsoleLog(a);
+        return (-1);
+        break;
+    
+}
 };
 
 module.exports = {
@@ -139,3 +236,5 @@ module.exports = {
   bulletProodAddNumber,
   bulletProofSubtractFive,
 };
+
+

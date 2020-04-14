@@ -1,0 +1,46 @@
+/////// QUESTION  1 ////////////
+ Once the exercice 2 has been set up, I  have done the following:
+git checkout basic-js
+git pull
+git checkout {your version of the basic-js branch you've been working on}
+git merge --no-ff basic-js
+I expected that the last command would have broguth everything that was in basic-js into mine branch. 
+However the structure of the files in basic-js is different from mine. E.g In basic-js in github I have :
+    Exercises
+        functions
+        object
+        scope   
+        tests
+        types
+        utils
+        variables
+    Instruction
+    notes.js
+My branch called RosibelVrnachFromBasicJs has the following structure
+    Exercises
+        Rosibel Asnwers
+            Instructions
+            notes
+            object
+            RosibleExercice
+            scopetypes
+            variables
+        functions
+        tests
+        utils
+
+when I do  git status(being in my branch) I get up to date
+/////// QUESTION  2 ////////////
+Are these two things the same:
+
+const subtractFive = (a) => {
+  let value = a;
+  return (value - 5);
+};
+
+and
+
+const subtractFive = (a) => {
+  return (a - 5);
+};
+
