@@ -52,6 +52,21 @@ let newArray= [1, 2, 3];
 addOneToEachElement();
 console.log(newArray);
 
+//or
+const addOneToEachElementNew = (numbersNew) => {
+
+  const array1 = [1, 2, 3];
+
+// pass a function to map
+const map1 = array1.map(x => x + 1);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+}
+addOneToEachElementNew();
+console.log();
+
+
 
 //For each element in the array: update the value with 1 plus the original value
 
@@ -90,11 +105,25 @@ The use of Array.map and all any other Array related function is PROHIBITED !!!
 
 const myMap = (numbers) => {
   // add your code here
-};
+    // add your code here
+    // HINT: Check the Array type related function on the internet {
+      function myFunction(item, index, arr) {
+        arr[index] = item + 1;
+      }
+      newArray.forEach(myFunction) 
+  };
+  let newArray= [1, 2, 3];  
+  myMap();
+  console.log(newArray);
+  
+
 
 const addOneToEachElementUsingMyMap = (numbers) => {
   return myMap(numbers);
 };
+
+addOneToEachElement();
+console.log(newArray);
 
 /*
                   EXERCISE 6
