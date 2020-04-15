@@ -70,8 +70,13 @@ If the function is called with no parameter or an empty array, it should return 
 const displayArrayElementsInUpperCase = (strings) => {
   // add your code here
   // HINT: Check the Array type related function on the internet
-};
-
+  let strings = ['a', 'b', 'c', 'd']
+  strings.reduce((accumulator, element) => {
+    return accumulator + element.toUpperCase()
+  }, '');
+        
+  displayArrayElementsInUpperCase();
+  console.log();
 /*
           EXERCISE 5
 
