@@ -45,7 +45,7 @@ function logMyWardrobeItemsNumber() {
     socks: 2000
   };
 Object.freeze(wardrobeItems)
-  wardrobeItems.pants = 9;
+  wardrobeItems.pants = 2;
 
   // This means I'm accessing the pants key of the wardrobeItems object and assigning it the value 2
   console.log(wardrobeItems);
@@ -54,7 +54,7 @@ Object.freeze(wardrobeItems)
 logMyHobbies();
 // Expected console output: ["Sleeping", "Working", "Annoying whamen", "Eating some more"]
 logMyWardrobeItemsNumber();
-// Expected console output: { underwear: 1, pants: 9, socks: 2000 }
+// Expected console output: { underwear: 1, pants: 2, socks: 2000 }
 
 /*   The two following functions behave properly but why ? The hobbie and wardrobeItems variable were defined as const, they should be unpdatable. 
    Try to find why and answer below. */

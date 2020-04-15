@@ -5,16 +5,13 @@
 
 
 const writeMyNameProperly = name => {
- 
-  // This function should return a one word string with the first letter in uppercase and the rest in lowercase
-  
-
+   // This function should return a one word string with the first letter in uppercase and the rest in lowercase
 return name;
  
 };
+
 console.log(name);
 
-//===============================================
 
 const nameProperlyWritten = writeMyNameProperly("MiCkAeL");
 
@@ -36,12 +33,11 @@ const logMyHobbiesOneByOne = hobbies => {
 };
 
 const hobbies = ["Sleeping", "Eating", "Annoying whamen", "Eating some more"];
-
+//let oneByOne = [hobbies[0],hobbies[1],hobbies[2],hobbies[3] ];
 logMyHobbiesOneByOne(hobbies);
-console.log(hobbies[0]);
-console.log(hobbies[1]);
-console.log(hobbies[2]);
-console.log(hobbies[3]);
+console.log(hobbies);
+
+
 // Expected output result:
 // "Sleeping"
 // "Eating"
@@ -54,10 +50,7 @@ const addPlayingGamesInMyHobbies = () => {
 
 
 addPlayingGamesInMyHobbies();
-console.log(hobbies[0]);
-console.log(hobbies[1]);
-console.log(hobbies[2]);
-console.log(hobbies[3]);
+console.log(hobbies);
 // Expected output result:
 // "Sleeping"
 // "Eating"
@@ -65,14 +58,12 @@ console.log(hobbies[3]);
 // "Eating some more"
 // "Playing Games"
 
-const removePlayingGamesInMyHobbies = () => {};
-hobbies.pop();
-removePlayingGamesInMyHobbies();
+const removePlayingGamesInMyHobbies = () => {
+  hobbies.pop();
+};
 
-console.log(hobbies[0]);
-console.log(hobbies[1]);
-console.log(hobbies[2]);
-console.log(hobbies[3]);
+removePlayingGamesInMyHobbies();
+Console.log(hobbies);
 // Expected output result:
 // "Sleeping"
 // "Eating"
