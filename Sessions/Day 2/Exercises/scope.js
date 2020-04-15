@@ -10,9 +10,10 @@ function increaseCountByARandomValue() {
   }
 
   const safeValue = makeSureValueIsNotHigherThanAHundred(randomValue);
-  count += randomValue;
+  count += safeValue;
   // += is just a shorter way to write "count = count + randomValue"
   // This also works with -, /, * and %
+
 }
 
 function decreaseCountByARandomValue() {
@@ -23,19 +24,19 @@ function decreaseCountByARandomValue() {
   }
 
   const safeValue = makeSureValueIsNotLowerThanZero(randomValue);
-  count -= randomValue;
+  count -= safeValue;
 }
 
 increaseCountByARandomValue();
 decreaseCountByARandomValue();
 
-// is increaseCountByARandomValue accessible in the file's global scope ?
-// is decreaseCountByARandomValue accessible in the file's global scope ?
-// is makeSureValueIsNotHigherThanAHundred accessible in the file's global scope ?
-// is makeSureValueIsNotHigherThanAHundred accessible in the increaseCountByARandomValue function scope ?
-// is makeSureValueIsNotHigherThanAHundred accessible in the decreaseCountByARandomValue function scope ?
-// is increaseCountByARandomValue accessible in the decreaseCountByARandomValue function scope ?
-// is increaseCountByARandomValue accessible in the increaseCountByARandomValue function scope ?
+// is increaseCountByARandomValue accessible in the file's global scope ? Yes
+// is decreaseCountByARandomValue accessible in the file's global scope ? Yes
+// is makeSureValueIsNotHigherThanAHundred accessible in the file's global scope ? No
+// is makeSureValueIsNotHigherThanAHundred accessible in the increaseCountByARandomValue function scope ? Yes
+// is makeSureValueIsNotHigherThanAHundred accessible in the decreaseCountByARandomValue function scope ? No
+// is increaseCountByARandomValue accessible in the decreaseCountByARandomValue function scope ? no
+// is increaseCountByARandomValue accessible in the increaseCountByARandomValue function scope ? yes
 
-// Where is the count variable accessible from ?
-// Where is decreaseCountByARandomValue's randomValue and safeValue accessible from ?
+// Where is the count variable accessible from ? accessible from decreaseCountByARandomValue and makeSureValueIsNotHigherThanAHundred and increaseCountByARandomValue functions
+// Where is decreaseCountByARandomValue's randomValue and safeValue accessible from ? accessible from makeSureValueIsNotLowerThanZero and makeSureValueIsNotLowerThanZero functions
