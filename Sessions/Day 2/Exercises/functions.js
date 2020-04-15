@@ -9,18 +9,24 @@ The addNumber function should add both parameters and return the result
 
 const addNumber = (a, b) => {
   // add your code here
+  return a+b;
 };
 
+console.log(addNumber(1,2));
 /*
           EXERCISE 2
  
-The subtractFive function should subtract 5 to the passed parameter return the result
+The subtractFive function should subtract 5 from the passed parameter and return the result
 
 */
 
 const subtractFive = (a) => {
   // add your code here
+return a-5;
 };
+
+subtractFive(10);
+
 
 /*
           EXERCISE 3
@@ -34,11 +40,20 @@ i.e:
 If the function is called with no parameter or an empty array, it should return an empty array
 
 */
-
 const addOneToEachElement = (numbers) => {
   // add your code here
-  // HINT: Check the Array type related function on the internet
+  // HINT: Check the Array type related function on the internet {
+    function myFunction(item, index, arr) {
+      arr[index] = item + 1;
+    }
+    newArray.forEach(myFunction) 
 };
+let newArray= [1, 2, 3];  
+addOneToEachElement();
+console.log(newArray);
+
+
+//For each element in the array: update the value with 1 plus the original value
 
 /*
           EXERCISE 4
