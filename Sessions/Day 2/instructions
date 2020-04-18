@@ -21,6 +21,14 @@ PART 2: Exercises
                     Once you answered, feel free to test it out and if some of your answers were wrong, keep them and add your correction one line below
                     To run this file run "node Sessions/Day\ 2/Exercises/scope.js"
 
+
+          -> Function: Follow the requirements given in the functions.js file and complete the empty functions that are in it.
+                       NONE OF MY CODE IS TO BE REMOVED !
+                       Only add code in the functions where the "// add your code here" comment is in.
+                       At any moment you can test your work and make sure everything's working
+                       as expected. To do this move to the /Exercises folder and run "node tests.js".
+
+
 PART 3:
 
           -> Add, commit and create a PR.
