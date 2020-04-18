@@ -40,7 +40,13 @@ i.e:
 If the function is called with no parameter or an empty array, it should return an empty array
 
 */
-const addOneToEachElement = (numbers) => {
+const addOneToEachElementTwo = (numbers) => {
+  return numbers + 1  
+  }
+  const newArray = [1,2,3];
+  newArray.map(addOneToEachElementTwo);
+
+/*const addOneToEachElement = (numbers) => {
   // add your code here
   // HINT: Check the Array type related function on the internet {
     function myFunction(item, index, arr) {
@@ -66,7 +72,14 @@ console.log(map1);
 addOneToEachElementNew();
 console.log();
 
-
+//
+const oldArray =[1, 2,3];
+const addOneToEachElementTwo = (numbers, index, arr) => {
+return numbers + 1  
+}
+const newArray = oldArray.map(addOneToEachElementTwo)
+console.log(newArray)
+;*/
 
 //For each element in the array: update the value with 1 plus the original value
 
@@ -82,16 +95,12 @@ If the function is called with no parameter or an empty array, it should return 
 
 */
 
-const displayArrayElementsInUpperCase = (strings) => {
-  // add your code here
-  // HINT: Check the Array type related function on the internet
-  let strings = ['a', 'b', 'c', 'd']
-  strings.reduce((accumulator, element) => {
-    return accumulator + element.toUpperCase()
-  }, '');
-        
-  displayArrayElementsInUpperCase();
-  console.log();
+const displayArrayElementsInUpperCase = (item, index, array) => {
+console.log(item.toUpperCase());
+}
+let myArray =['i', 'love', 'javascript'];
+myArray.forEach(displayArrayElementsInUpperCase);
+
 /*
           EXERCISE 5
 
@@ -138,7 +147,16 @@ The use of Array.forEach and all any other Array related function is PROHIBITED 
 
 const myForEach = (strings) => {
   // add your code here
-};
+    let array1 = strings.split(' ');
+    let newarray1 = [];
+      
+    for(let x = 0; x < array1.length; x++){
+        newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+    }
+    return newarray1.join(' ');
+  }
+  console.log(myForEach("i love javascript"));
+
 
 const displayArrayElementsInUpperCaseUsingMyForEach = (strings) => {
   myForEach(strings);
@@ -159,11 +177,28 @@ The new version of the function should:
 */
 
 const bulletProodAddNumber = (a, b) => {
-  // add your code here
-};
+  // add yo  // add your code here
+  
+  if (Number(a) && (Number(b))) {
+    return a + b;
+  }
+  else if  (!Number(a) && (Number(b)))
+  {
+    return b ;
+  }
+  else if  (Number(a) && (!Number(b)))
+  {
+    return a ;
+}
+  else return -1
+}
+
+console.log(bulletProodAddNumber("a", 2));
+
+
 
 /*
-          EXERCISE 2
+          EXERCISE 8
 
 The subtractFive function is the same as EXERCISE 2 but this time let's make sure the parameters are
 of the expected type.
@@ -176,6 +211,15 @@ The new version of the function should:
 
 const bulletProofSubtractFive = (a) => {
   // add your code here
+  const subtractFive = (a) => {
+    // add your code here
+      if (!Number(a)) {
+        return -1;
+      }
+      else return a-5
+    }     
+  
+    console.log(bulletProofSubtractFive("test")); 
 };
 
 module.exports = {
